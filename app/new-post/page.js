@@ -19,7 +19,7 @@ export default function NewPostPage() {
       errors.push('Content is required.');
     }
 
-    if (!image) {
+    if (!image || image.size === 0) {
       errors.push('An image must be attached.');
     }
 
