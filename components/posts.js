@@ -14,6 +14,12 @@ function Post({ post, action }) {
           src={post.image} 
           alt={post.title} 
           fill
+
+          //Note, when you don't know the actual dimensions of user submitted
+          //images, you don't want to overwrite them with width/height, but instead
+          //use Fill. Fill will set the image css to 'position: absolute' which then
+          //causes the image to fill up the whole screen. The workaround to this is to
+          // set the Image parent's componet to 'position: relative' in CSS
           // width={}
           // height={}
         />

@@ -158,9 +158,20 @@ main {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
-.post img {
+.post-image {
+  /* When using the fill prop on an Image element, need to set
+  the postion of the image's parent to relative, because fill
+  inherently sets the Image position to absolute */
+  position: relative;
   width: 8rem;
   height: 6rem;
+  /* Note: this method requires the width/height be set on the parent, instead of the
+  actual img elemeent below */
+}
+
+.post img {
+  /* width: 8rem;
+  height: 6rem; */
   object-fit: cover;
 }
 
